@@ -5,41 +5,35 @@ let btnReset = document.querySelector(".reset");
 
 let count = 0;
 
-// console.log(value);
-// Implementing The Increase Button
-btnIncrease.addEventListener("click", function () {
-  count++;
-  value.textContent = count;
+const btn = document.querySelector(".button-container");
+btn.addEventListener("click", function (e) {
+  if (e.target.classList.contains("increase")) {
+    count++;
+    value.textContent = count;
 
-  if (count >= 1) {
-    value.style.color = "green";
-  } else if (count === 0) {
+    if (count >= 1) {
+      value.style.color = "green";
+    } else if (count === 0) {
+      value.style.color = "#222";
+    } else {
+      value.style.color = "red";
+    }
+  } else if (e.target.classList.contains("decrease")) {
+    count--;
+    value.textContent = count;
+
+    if (count >= 1) {
+      value.style.color = "green";
+    } else if (count === 0) {
+      value.style.color = "#222";
+    } else {
+      value.style.color = "red";
+    }
+  } else if (e.target.classList.contains("reset")) {
+    count = 0;
+    value.textContent = count;
     value.style.color = "#222";
-  } else {
-    value.style.color = "red";
   }
 });
 
-// Implementing The Decrease Button
-btnDecrease.addEventListener("click", function () {
-  count--;
-  value.textContent = count;
-  if (count >= 1) {
-    value.style.color = "green";
-  } else if (count === 0) {
-    value.style.color = "#222";
-  } else {
-    value.style.color = "red";
-  }
-});
-
-// Implementing The Reset Button
-
-btnReset.addEventListener("click", function () {
-  count = 0;
-  value.textContent = count;
-  value.style.color = "#222";
-});
-
-// This code need to be refactored but i have not done advanced DOM. MY THOUGHT IS There should be a way to loop over the buttons and put the conditions there.
-// Will revisit this code later
+const btns = document.querySelectorAll(".btn");
