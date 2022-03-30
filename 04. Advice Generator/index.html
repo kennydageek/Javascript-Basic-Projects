@@ -5,24 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&family=Twinkle+Star&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7ff047da6c.js" crossorigin="anonymous"></script>
   
   <title>Frontend Mentor | Advice generator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Advice #<!-- Advice ID goes here -->
+<main class="main flex">
+  <div class="container flex">
+    <div class="container-body">
+      <h3 class="container-body__heading">Advice #117</h3>
 
-  "<!-- Advice text goes here -->"
+      <blockquote class="container-body__quote">
+       <span class="container-body__quotemark"><sup><i class="fas fa-solid fa-quote-left"></i></sup></span>It is easy to sit up and take notice, what's difficult is getting up and taking action.<span class="container-body__quotemark"><sup><i class= "fas fa-solid fa-quote-right"></i></sup></span>
+      </blockquote>
+
+      <div class="container-body__divider"> 
+        <img  src = "images/pattern-divider-desktop.svg" class="imagedesktop"></img>
+        <img  src = "images/pattern-divider-mobile.svg" class ="imagemobile hidden"></img>
+      </div>
+
+      <div class="container-button">
+        <img src="images/icon-dice.svg" alt="icon" class="container-button__image">
+      </div>
+    
+    </div>
+
+  </div>
+</main>
+
   
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
