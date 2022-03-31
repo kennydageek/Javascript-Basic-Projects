@@ -4,10 +4,10 @@ let btn = document.querySelector('.container-button');
 let adviceID = document.querySelector('.advice-id');
 let quote = document.querySelector('.container-body__quote');
 
-// Click functionality
 
-btn.addEventListener('click', function() {
-        fetchAdvice = async function() {
+// Fetching Advice
+
+fetchAdvice = async function() {
         try {
         const res = await fetch('https://api.adviceslip.com/advice');
         
@@ -27,5 +27,12 @@ btn.addEventListener('click', function() {
         }
     }
 
+// Fetching advice upon refresh
+window.addEventListener('DOMContentLoaded', function() {
         fetchAdvice();
+})
+
+// Click functionality
+btn.addEventListener('click', function() {
+     fetchAdvice();   
 });
