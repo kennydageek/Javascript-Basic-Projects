@@ -72,18 +72,48 @@ body {
 }
 
 .input-wrapper {
-
     display: flex;
 }
 
 .input-number-wrapper {
+    display: flex;
     width: 80%;
     height: 31.3rem;
     background-color: rgba(0, 0, 255, 0.192);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .input-sign-wrapper {
     width: 20%;
     height: 31.4rem;
     background-color: rgba(0, 255, 64, 0.049);
+}
+
+.input-number__number {
+    text-align: center;
+    flex-basis: 30%;
+    margin-left: .5rem;
+    cursor: pointer;
+}
+
+.input-number__number:hover {
+    color: white;
+}
+
+.input-number__sign {
+    margin: 0;
+    padding: 2rem 0;
+    /* background-color: red; */
+    text-align: center;
+    cursor: pointer;
+}
+
+.input-number__sign:hover {
+    color: white;
+}
+
+.input-number__sign--5 {
+    padding-top: 0.4rem;
 }
